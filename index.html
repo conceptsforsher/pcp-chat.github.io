@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Progressive Chat — projects</title>
+<style>
+:root {
+    --bg: #0f1117; --panel: #171a21; --border: #262b36;
+    --text: #d7dbe2; --muted: #8b93a3; --accent: #6db3f2;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0; min-height: 100vh;
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--text);
+    display: flex; flex-direction: column; align-items: center;
+    padding: 64px 24px 40px;
+}
+h1 { font-size: 28px; margin: 0 0 8px; }
+h1 span { color: var(--accent); }
+p.lead { color: var(--muted); max-width: 640px; text-align: center; margin: 0 0 32px; }
+a.card {
+    display: block; width: 100%; max-width: 640px;
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 10px; padding: 18px 22px; margin-bottom: 14px;
+    color: var(--text); text-decoration: none;
+    transition: border-color .15s;
+}
+a.card:hover { border-color: var(--accent); }
+a.card h2 { margin: 0 0 4px; font-size: 19px; }
+a.card h2 code { color: var(--accent); font-size: 17px; }
+a.card p { margin: 0; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<h1>Progressive <span>Chat</span></h1>
+<p class="lead">
+    A Matrix client ecosystem — terminal, desktop, Android. Fast. Functional. Progressive.
+</p>
+<a class="card" href="https://progressive-chat.github.io/progressive-cli/">
+    <h2>progressive-<code>cli</code> — docs &amp; feature status</h2>
+    <p>Terminal Matrix client and coding agent (C++23). Live feature status with code anchors.</p>
+</a>
+<a class="card" href="https://github.com/progressive-chat/progressive-cli">
+    <h2>progressive-cli <code>@ GitHub</code></h2>
+    <p>Repository — issues, source, releases.</p>
+</a>
+<a class="card" href="https://github.com/progressive-chat">
+    <h2>The <code>progressive-chat</code> organization</h2>
+    <p>All projects: core, android, site, server and more.</p>
+</a>
+</body>
+</html>
