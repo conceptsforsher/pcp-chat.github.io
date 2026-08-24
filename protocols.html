@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Progressive Chat — chat protocols</title>
+<style>
+:root {
+    --bg: #0f1117; --panel: #171a21; --border: #262b36;
+    --text: #d7dbe2; --muted: #8b93a3; --accent: #6db3f2;
+    --ok: #7dcf9a; --exp: #e0c67a; --plan: #b48be8;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0; min-height: 100vh;
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--text);
+    display: flex; flex-direction: column; align-items: center;
+    padding: 64px 24px 40px;
+}
+h1 { font-size: 28px; margin: 0 0 8px; }
+h1 span { color: var(--accent); }
+p.lead { color: var(--muted); max-width: 720px; text-align: center; margin: 0 0 32px; }
+table { width: 100%; max-width: 860px; border-collapse: collapse; margin-bottom: 28px; }
+th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; }
+th { background: var(--panel); color: var(--accent); font-weight: 600; }
+td code { color: var(--accent); }
+.st-implemented { color: var(--ok); font-weight: 600; }
+.st-experimental { color: var(--exp); font-weight: 600; }
+.st-planned { color: var(--plan); font-weight: 600; }
+.st-awaited { color: var(--muted); font-weight: 600; }
+p.back { margin-top: 8px; }
+p.back a { color: var(--accent); text-decoration: none; }
+.note { max-width: 860px; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<h1>Chat <span>protocols</span> we want to use</h1>
+<p class="lead">
+    Everything the Progressive Chat ecosystem speaks today or plans to speak —
+    one Matrix-native core plus focused bridges, ports and apps for the rest.
+</p>
+
+<table>
+<tr><th>Protocol</th><th>Role in the ecosystem</th><th>Where</th><th>Status</th></tr>
+
+<tr><td><code>Matrix</code></td>
+<td>Native core protocol: sync, rooms, E2EE (Olm/Megolm), Spaces,
+threads, polls (MSC3381), reactions, edits, m.call signaling</td>
+<td>progressive-core · -cli · -server · -android</td>
+<td class="st-implemented">implemented</td></tr>
+
+<tr><td><code>IRC</code></td>
+<td>Bridge/client: connect/join/msg/leave/whois/names from the CLI;
+Android port</td>
+<td>cli `irc` · android-irc</td>
+<td class="st-experimental">experimental</td></tr>
+
+<tr><td><code>XMPP</code></td>
+<td>Android port over native C++ integration</td>
+<td>android-xmpp</td>
+<td class="st-planned">planned</td></tr>
+
+<tr><td><code>Telegram</code> (MTProto)</td>
+<td>TDLib-backed bridge in the CLI; Android Telegram port</td>
+<td>cli `td` · android-telegram</td>
+<td class="st-experimental">experimental</td></tr>
+
+<tr><td><code>DeltaChat / Email</code></td>
+<td>Autocrypt messaging through the DeltaChat bridge; Android port</td>
+<td>cli `dc` · android-delta</td>
+<td class="st-experimental">experimental</td></tr>
+
+<tr><td><code>Lemmy</code> (ActivityPub)</td>
+<td>Federation client: login/posts/post/upvote/comments; Android port</td>
+<td>cli `lemmy` · android-lemmy</td>
+<td class="st-experimental">experimental</td></tr>
+
+<tr><td><code>Reddit</code></td>
+<td>Multi-account Reddit client built on the Matrix chat framework</td>
+<td>chat-reddit</td>
+<td class="st-planned">planned</td></tr>
+
+<tr><td><code>m.call / WebRTC</code></td>
+<td>Voice calls: call/answer/hangup/wait signaling done;
+media plane = next milestone</td>
+<td>cli `call`</td>
+<td><span class="st-implemented">signaling</span> /
+<span class="st-awaited">media awaited</span></td></tr>
+</table>
+
+<h2 style="font-size:20px">Transports underneath</h2>
+<table>
+<tr><th>Transport</th><th>Coverage</th><th>Status</th></tr>
+<tr><td><code>Tor</code> (SOCKS5)</td><td>All HTTP(S) traffic + per-session override</td>
+<td class="st-implemented">implemented</td></tr>
+<tr><td><code>I2P</code></td><td>Same proxy path</td>
+<td class="st-implemented">implemented</td></tr>
+<tr><td><code>Yggdrasil</code></td><td>Native IPv6 transport inside the CLI</td>
+<td class="st-implemented">implemented</td></tr>
+</table>
+
+<p class="note">Statuses: implemented — ships today · experimental — works,
+edges expected · planned — on the roadmap · awaited — blocked on an upstream
+piece.</p>
+
+<p class="back"><a href="./">&#8592; back to projects</a></p>
+</body>
+</html>
