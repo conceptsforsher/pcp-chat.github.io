@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Progressive Chat — projects</title>
+<title>Progressive Chat</title>
 <style>
 :root {
     --bg: #0f1117; --panel: #171a21; --border: #262b36;
@@ -31,29 +31,37 @@ a.card:hover { border-color: var(--accent); }
 a.card h2 { margin: 0 0 4px; font-size: 19px; }
 a.card h2 code { color: var(--accent); font-size: 17px; }
 a.card p { margin: 0; color: var(--muted); font-size: 14px; }
+p.note { color: var(--muted); max-width: 640px; font-size: 13px; text-align: center; margin-top: 20px; }
 </style>
 </head>
 <body>
 <h1>Progressive <span>Chat</span></h1>
 <p class="lead">
-    A Matrix client ecosystem — terminal, desktop, Android. Fast. Functional. Progressive.
+    A client for talking to models: you bring the key, it keeps the conversation.
+    Written in C++26. Runs in the browser, on a desktop and on a phone.
 </p>
-<a class="card" href="https://progressive-chat.github.io/progressive-cli/">
-    <h2>progressive-<code>cli</code> — docs &amp; feature status</h2>
-    <p>Terminal Matrix client and coding agent (C++23). Live feature status with code anchors.</p>
+<a class="card" href="https://progressive-chat.github.io/progressive-chat/">
+    <h2>Talk to it <code>in the browser</code></h2>
+    <p>Web build published from every push to main. Nothing to install; the key stays yours.</p>
 </a>
-<a class="card" href="https://github.com/progressive-chat/progressive-cli">
-    <h2>progressive-cli <code>@ GitHub</code></h2>
-    <p>Repository — issues, source, releases.</p>
+<a class="card" href="https://github.com/progressive-chat/progressive-chat#where-it-stands">
+    <h2>Where it <code>stands</code></h2>
+    <p>A diary of the work, one entry for each day, written by hand.</p>
 </a>
-<a class="card" href="./protocols.html">
-    <h2>Chat <code>protocols</code> — what we speak</h2>
-    <p>Matrix native core, IRC/XMPP/Telegram/DeltaChat/Lemmy/Reddit ports,
-    VoIP and the transports underneath (Tor/I2P/Yggdrasil).</p>
+<a class="card" href="https://github.com/progressive-chat/progressive-chat">
+    <h2>progressive-chat <code>@ GitHub</code></h2>
+    <p>Repository — source, issues, every build ever made.</p>
 </a>
-<a class="card" href="https://github.com/progressive-chat">
-    <h2>The <code>progressive-chat</code> organization</h2>
-    <p>All projects: core, android, site, server and more.</p>
+<a class="card" href="https://github.com/progressive-chat/progressive-chat/releases">
+    <h2>Builds <code>for downloading</code></h2>
+    <p>Pre-alpha and alpha builds for web, desktop and Android.</p>
 </a>
+<a class="card" href="https://github.com/progressive-chat/progressive-chat/wiki">
+    <h2>Doors it <code>speaks through</code></h2>
+    <p>Anthropic, Gemini, and everything OpenAI-shaped: OpenAI, DeepSeek, Groq, Ollama, local, custom.</p>
+</a>
+<p class="note">
+    The program is Agora carried into C++. Nothing else has changed but the language.
+</p>
 </body>
 </html>
